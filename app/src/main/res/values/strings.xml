@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">轻-地图</string>
+    <string name="logo_text">Power by </string>
+    <string name="xiangqing">
+        此软件基于百度地图SDK制作而成。\n
+        不知道为啥导航规划不了县级市,地级市正常,可能是我没弄好。\n
+        创作日期：2020/3/21\n
+        以热血浇灌凛冬枯瘦枝桠。
+    </string>
+</resources>

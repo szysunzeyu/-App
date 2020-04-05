@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/dhmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+
+        </com.baidu.mapapi.map.MapView>
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/edit_layout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/linelayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="起点····终点"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/driver_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:background="@drawable/creat_normal_edittext"
+                android:drawableStart="@drawable/radio_red"
+                android:drawablePadding="5dp"
+                android:hint="您在哪..不输入则以自己为坐标,同下"
+                android:textColor="#303030"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/driver_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:background="@drawable/creat_normal_edittext"
+                android:drawableStart="@drawable/radio_blue"
+                android:drawablePadding="5dp"
+                android:hint="您要去哪儿..目前仅支持地级市的搜索"
+                android:textSize="15sp" />
+            <Button
+                android:id="@+id/btn_Plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="规划路线"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/xuanzechuxing"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/linelayout"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="请选择出行方式:"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_marginStart="60dp"
+                    android:src="@drawable/zoulu"
+                    android:scaleType="centerInside"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/zoulu"/>
+
+                <ImageButton
+                    android:src="@drawable/kaiche"
+                    android:scaleType="centerInside"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/kaiche"/>
+                <ImageButton
+                    android:src="@drawable/buscar"
+                    android:scaleType="centerInside"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gongjiao"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/father_line"
+            android:layout_width="350dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/linelayout"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:hint="查询周边地点"
+                android:imeOptions="actionDone"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/search"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="#99FCFCFC"
+                android:scaleType="centerInside"
+                android:src="@drawable/search" />
+
+        </LinearLayout>
+        <ImageButton
+            android:background="@drawable/button"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/buju"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="450dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/daohang" />
+        <ImageButton
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/buju"
+            android:background="@drawable/button"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/but_Loc"
+            android:scaleType="centerInside"
+            android:src="@drawable/gps"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/left_menu"
+        layout="@layout/activity_drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
+</androidx.drawerlayout.widget.DrawerLayout>
